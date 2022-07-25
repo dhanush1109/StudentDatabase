@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Index Page</title>
+        <style>
+            h1{margin-top: -20px;}
+            #table1{
+                align-self: center;
+            }
+        body{
+            margin-left:200px;
+            background:#5d9ab2 url(https://w7.pngwing.com/pngs/192/664/png-transparent-child-students-group-of-children-studying-illustration-class-reading-people.png) center;
+            object-fit: fill;
+            }
+            #container1{   
+                background-color: rgb(242, 255, 0);
+                display: flex;
+                margin-right: auto;
+                margin-left: 450px;
+                margin-top: 10px;
+                margin-bottom: 1px;
+                width: 200px;
+                height: 50px;
+                padding: 30px;
+                font-size: 20px;
+                font-weight: bold;
+                border-radius: 100px;
+                text-align: center;
+                color: rgb(0, 8, 255);
+            }
+            #container{
+                background-color: rgb(0, 110, 255);
+                display: flex;
+                margin-right: auto;
+                margin-left: 350px;
+                width: 380px;
+                height: 400px;
+                padding: 45px;
+                font-size: 20px;
+                font-weight: bold;
+                border-radius: 10px;
+                color: rgb(255, 255, 255);
+            }
+            .table1{
+                margin-left:40px;
+                margin-right: -400px;
+                width: 1000px;
+                height: 20px;
+                table-layout: auto;
+                border-collapse: collapse;
+            }
+            table,th,td{
+                border-radius: 50px;
+                border-style: groove;
+                text-align: center;  
+            }
+            button{
+                display: flex;
+                margin-top: 380px;
+                margin-left: 70px;
+                margin-right: -40px;
+                
+                border-radius: 4px;
+                border: none;
+                text-align: center;
+                
+                font-size: 20px;
+                padding: 0px;
+                width: auto;
+                
+            }
+            a{
+                color: antiquewhite;
+                background-color: #0ded15;
+                text-decoration: none;
+                width: 200px;
+                height: 30px;
+                font-size: medium;
+                margin-bottom: 50px;
+                margin-top: auto;
+            }
+
+            a:hover{
+                color: rgb(0, 8, 255);
+                background-color: palevioletred;
+            }
+            
+        </style>
+    </head>
+    <div id="container1">
+    <body >
+        <h1 >Student Database</h1>
+        <!--style="text-align: center;"-->
+    
+        <!--style="background-color:rgb(79, 240, 54);"-->
+    </div>
+    <br><br>
+        <div id="container">
+ 
+<table class="table1">
+  
+    <th>First Name</th>
+    <th>Last Name</th>
+    <th>USN</th>
+    <th>Branch</th>
+{% for x in mymembers %}
+<tr>
+
+<td>{{ x.firstname }}</td>
+<td>{{ x.lastname }}</td>
+<td>{{ x.enrollmentno }}</td>
+<td>{{ x.specialization }}</td>
+</tr>
+{% endfor %}
+</table>
+<br><br>
+<button><a href="add/"> Add Student Data </a></button>
+<br><br>
+<button><a href="delete/"> Delete Student Data </a></button>
+</div>
+    </body>
+</html>

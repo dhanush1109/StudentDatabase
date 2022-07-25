@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Delete Student Details</title>
+        <style>
+            body{
+                background: url(https://media.istockphoto.com/vectors/cartoon-illustration-of-a-classroom-paper-fight-vector-id181701516?k=20&m=181701516&s=612x612&w=0&h=-3VL_eamWWmCK8MQ6jsvyT1HjUBUiDoY6h1shzESxVQ=);
+            }
+            h1{
+                font-size: 40px;
+                text-align:center;
+                font-style: oblique;
+                text-decoration: underline;
+            }
+            #container{
+                background-color: rgb(0, 110, 255);
+                display: flex;
+                margin-right: auto;
+                margin-left: auto;
+                width: 250px;
+                padding: 50px;
+                font-size: 20px;
+                font-weight: bold;
+                border-radius: 8px;
+                color: yellow;
+
+            }
+            #submit{
+                font-style: oblique;
+                font-size: small;
+                color: red
+            }
+            #submit:hover{
+                color: rgb(0, 183, 255);
+                background-color: rgb(13, 157, 37);
+            }
+        </style>
+    </head>
+    <body style="background-color:rgb(212, 229, 86);">
+              
+                <h1>Add Student Data</h1>
+
+        <div id="container">
+            <form action="deleterecord/" method="post">
+                {% csrf_token %}
+                Enrollment No.:<br>
+                <input name="e_no" type="number" required>
+                
+                <br><br>
+                <input type="submit" value="Submit" id="submit">
+                </form>
+        </div>
+    </body>
+</html>
